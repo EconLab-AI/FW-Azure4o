@@ -1,3 +1,4 @@
+import os
 from flask import Flask, request, render_template
 from flask_cors import CORS
 import openai
@@ -7,10 +8,15 @@ import markdown
 app = Flask(__name__)
 CORS(app)  # Erlaube CORS für alle Domains
 
+# Verwende Umgebungsvariablen anstelle von hartkodierten Werten
+api_key = os.environ.get("AZURE_OPENAI_API_KEY")
+azure_endpoint = os.environ.get("AZURE_OPENAI_ENDPOINT")
+api_version = os.environ.get("AZURE_OPENAI_API_VERSION")
+
 client = AzureOpenAI(
-    api_key="f264663f38a4417c9837e7d19737a73e",  # Dein API-Schlüssel
-    azure_endpoint="https://econchat.openai.azure.com/openai/deployments/gpt-4o/chat/completions?api-version=2023-03-15-preview",  # Dein Azure OpenAI Endpunkt
-    api_version="2023-03-15-preview"  # Die API-Version, die du verwenden möchtest
+    api_key=api_key,
+    azure_endpoint=azure_endpoint,
+    api_version=api_version
 )
 
 system_prompt = """
