@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EconLab AI Firewall-Agent</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <link rel="icon" type="image/x-icon" href="{{ url_for('static', filename='favicon.ico') }}">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <img src="{{ url_for('static', filename='logo.png') }}" alt="Logo" class="logo">
+            <h1>EconLab AI Firewall-Agent</h1>
+            <h2>Bitte geben Sie die zu analysierenden Firewall-Regeln in den Chat ein!</h2>
+            <p class="copyright">&copy; 2024 entwickelt von EconLab AI</p>
+        </header>
+        <div class="chat-container">
+            <div class="input-container">
+                <form method="post">
+                    <textarea name="firewall_rules" id="user-input" placeholder="Geben Sie Ihre Firewall-Regeln ein..." required></textarea>
+                    <button type="submit">Analysieren</button>
+                </form>
+            </div>
+            <div class="output-container" id="response-output">
+                {% if result %}
+                    <h3>Analyseergebnis:</h3>
+                    <div>{{ result|safe }}</div> <!-- safe filter to allow HTML rendering -->
+                {% endif %}
+            </div>
+        </div>
+    </div>
+</body>
+</html>

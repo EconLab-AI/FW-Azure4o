@@ -1,0 +1,136 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #000000; /* Schwarzer Hintergrund */
+    color: #ffffff; /* Weiße Schrift */
+}
+
+.container {
+    text-align: center;
+    padding: 20px;
+}
+
+header {
+    margin-bottom: 20px; /* Gesamt-Abstand nach unten verringert */
+}
+
+header h1 {
+    margin: 20px 0; /* Abstand zwischen Logo und Titel */
+    font-size: 2.5em;
+}
+
+header h2 {
+    margin: 5px 0 10px; /* Abstand zwischen Titel und Untertitel */
+    font-size: 1.5em;
+}
+
+.logo {
+    width: 400px; /* Größe des Logos */
+    margin-top: 100px; /* Abstand oberhalb des Logos */
+    margin-bottom: 5px; /* Abstand unterhalb des Logos */
+}
+
+.copyright {
+    margin-top: 10px; /* Etwas Abstand oberhalb des Copyright-Textes */
+    font-size: 0.8em; /* Kleinere Schriftgröße */
+    color: #aaaaaa; /* Helleres Grau für den Copyright-Text */
+}
+
+.chat-container {
+    display: flex;
+    flex-direction: column; /* Fenster untereinander anordnen */
+    align-items: flex-start;
+    width: 60%;
+    margin: 0 auto; /* Zentriert die Container auf der Seite */
+}
+
+.input-container, .output-container {
+    width: 100%; /* Volle Breite */
+    padding: 20px;
+    background-color: #333333; /* Dunkleres Grau für Fenster */
+    border-radius: 10px;
+    margin-bottom: 20px; /* Abstand zwischen Input und Output */
+    text-align: left; /* Links bündig ausgerichtet */
+}
+
+textarea {
+    width: 100%;
+    height: 150px; /* Angepasste Höhe für das Textfeld */
+    background-color: #222222;
+    color: #ffffff;
+    border: none;
+    border-radius: 10px;
+    padding: 10px;
+    font-size: 1em;
+    resize: none;
+}
+
+button {
+    background-color: #444444;
+    color: #ffffff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 1em;
+    margin-top: 10px;
+}
+
+button:hover {
+    background-color: #555555;
+}
+
+#response-output {
+    overflow-y: auto;
+    background-color: #222222;
+    padding: 20px; /* Einheitlicher Abstand innerhalb des Containers */
+    border-radius: 10px;
+    white-space: pre-wrap; /* Beibehaltung der Formatierung im Output */
+    text-align: left; /* Links bündig ausgerichtet */
+}
+
+#response-output h1, #response-output h2, #response-output h3, #response-output h4, #response-output h5, #response-output h6 {
+    color: #ffffff;
+    margin-top: 20px; /* Einheitlicher Abstand oberhalb der Überschrift */
+    margin-bottom: 10px; /* Einheitlicher Abstand unterhalb der Überschrift */
+}
+
+#response-output h1 {
+    font-size: 2em;
+    font-weight: bold;
+}
+
+#response-output h2 {
+    font-size: 1.75em;
+    font-weight: bold;
+}
+
+#response-output h3 {
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+#response-output h4 {
+    font-size: 1.25em;
+    font-weight: bold;
+}
+
+#response-output h5 {
+    font-size: 1em;
+    font-weight: bold;
+}
+
+#response-output h6 {
+    font-size: 0.875em;
+    font-weight: bold;
+}
+
+#response-output p {
+    margin-bottom: 10px; /* Einheitlicher Abstand zwischen den Absätzen */
+}
+
+#response-output ul {
+    margin-top: 10px; /* Abstand vor und nach Listen */
+    margin-bottom: 10px;
+    padding-left: 20px; /* Einrückung der Listen */
+}
