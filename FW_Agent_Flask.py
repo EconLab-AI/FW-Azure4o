@@ -5,8 +5,8 @@ from flask import Flask, render_template, request, send_from_directory
 app = Flask(__name__)
 
 # Umgebungsvariablen für Azure OpenAI
-api_key = os.environ.get('API_KEY')  # API-Schlüssel aus der Umgebungsvariable
-azure_endpoint = os.environ.get('AZURE_ENDPOINT')  # Azure-Endpunkt aus der Umgebungsvariable
+api_key = os.environ.get('API_KEY')
+azure_endpoint = os.environ.get('AZURE_ENDPOINT')
 
 @app.route('/', methods=['GET', 'POST'])
 def index():
