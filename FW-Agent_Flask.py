@@ -1,12 +1,11 @@
-import os
 import requests
 from flask import Flask, render_template, request, send_from_directory
 
 app = Flask(__name__)
 
-# Umgebungsvariablen für Azure OpenAI
-api_key = os.environ.get('API_KEY')
-azure_endpoint = os.environ.get('AZURE_ENDPOINT')
+# Hartcodierte Werte für Azure OpenAI
+api_key = 'f264663f38a4417c9837e7d19737a73e'
+azure_endpoint = "https://econchat.openai.azure.com/openai/deployments/gpt-4o/chat/completions?api-version=2023-03-15-preview"
 
 @app.route('/', methods=['GET', 'POST'])
 def index():
@@ -41,7 +40,7 @@ def index():
                         - Regel-ID
                         - Aktion (Erlauben/Blockieren)
                         - Zusätzliche Merkmale (z.B. Logging, IPS, AV)
-                        Wichtig: Keine Aufführung dieser Informationen im Output!
+                        Wichtig: Keine Aufführung der dieser Informationen im Output!
                         
                         Kategorisierung der Regeln:
                         Kategorisiere die Regeln nach ihrem Zweck, z.B. E-Mail-Verkehr, Länderblockierung, VPN-Verbindungen, interner Verkehr, spezifische Dienste.
@@ -62,7 +61,7 @@ def index():
                         
                         Dokumentation der Analyse:
                         Dokumentiere jede analysierte Regel, einschließlich Ihrer Bewertung und Empfehlungen.
-                        Erstelle eine Zusammenfassung der gefundenen Schwachstellen und gebe konkrete Verbesserungsvorschläge.
+                        Erstelle eine Zusammenfassung der gefundenen Schwachstellen und geben Sie konkrete Verbesserungsvorschläge.
                         
                         Empfehlungen und Berichterstattung:
                         Erstelle einen ausführlichen Bericht im Fließtext für den Mandanten, der die Analyse, Bewertungen und Empfehlungen enthält.
