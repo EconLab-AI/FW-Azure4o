@@ -66,4 +66,4 @@ jobs:
         with:
           app-name: 'FW4o'
           slot-name: 'Production'
-          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_AFE9DD354AFD48B5BC14B17BFB7C51F1 }}
+          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_04FE3E9ABC4C4BBEB340EDE1725CD47A }}
