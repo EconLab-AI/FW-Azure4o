@@ -17,7 +17,7 @@
         </header>
         <div class="chat-container">
             <div class="input-container">
-                <form method="post" action="{{ url_for('index') }}">
+                <form method="post" action="{{ url_for('hello') }}"> <!-- ACHTUNG: action auf 'hello' gesetzt -->
                     <textarea name="firewall_rules" id="user-input" placeholder="Geben Sie Ihre Firewall-Regeln ein..." required></textarea>
                     <button type="submit">Analysieren</button>
                 </form>                
