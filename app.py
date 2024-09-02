@@ -37,7 +37,7 @@ def hello():
                     {"role": "system", "content": "You are a helpful assistant."},
                     {"role": "user", "content": req}  # Sende die Firewall-Regeln an die API
                 ],
-                "max_tokens": 150
+                "max_tokens": 4096
             }
         )
 
